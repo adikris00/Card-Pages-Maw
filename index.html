@@ -1,0 +1,389 @@
+<!doctype html>
+<html ⚡ lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Card Page Maw – Satu Link untuk Semua Konten Anda</title>
+    <link rel="canonical" href="https://yourdomain.com/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="Card Page Maw adalah halaman bio link cepat dan ringan berbasis AMP yang menghubungkan semua tautan penting Anda dalam satu halaman. Cocok untuk media sosial dan personal branding.">
+    <meta name="author" content="Card Page Maw">
+    <meta property="og:title" content="Card Page Maw – Satu Link untuk Semua Konten Anda">
+    <meta property="og:description" content="Satu halaman AMP super ringan untuk menampung semua tautan penting Anda. Bagikan di Instagram, TikTok, Twitter, dan lainnya.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/card-page-maw">
+    <meta property="og:image" content="https://yourdomain.com/thumbnail.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Card Page Maw – Bio Link Anda yang Ringan dan Cepat">
+    <meta name="twitter:description" content="Tautkan semua sosial media, toko online, dan konten Anda dalam satu halaman statis berbasis AMP. Gratis, simpel, dan mobile-friendly.">
+    <meta name="twitter:image" content="https://yourdomain.com/thumbnail.jpg">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <style amp-custom>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: #120000;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255, 100, 0, 0.08), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(255, 0, 0, 0.1), transparent 50%);
+            z-index: -2;
+            animation: pulse-bg 15s infinite ease-in-out;
+        }
+        @keyframes pulse-bg {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+        .main-card {
+            background: rgba(18, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 40px 30px;
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.7),
+                0 0 40px rgba(255, 87, 34, 0.4),
+                inset 0 1px 0 rgba(255, 152, 0, 0.2);
+            border: 1px solid rgba(255, 87, 34, 0.4);
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ffc107, #ff5722, #f44336, #ff9800, #ffc107);
+            background-size: 200% 100%;
+            animation: fire-line 4s linear infinite;
+        }
+        @keyframes fire-line {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 87, 34, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 87, 34, 0.3);
+        }
+        .social-icon:hover {
+            background: rgba(255, 87, 34, 0.3);
+            border-color: #ff5722;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+        }
+        .profile-section {
+            margin-bottom: 30px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 3px solid #ff5722;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        }
+        .brand-tag {
+            color: #ff9800;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 8px;
+            text-shadow: 0 0 8px rgba(255, 152, 0, 0.7);
+        }
+        .main-title {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 15px rgba(255, 87, 34, 0.6);
+            letter-spacing: -0.5px;
+        }
+        .description {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: block;
+            width: calc(100% - 20px);
+            max-width: 320px;
+            padding: 16px 24px;
+            margin: 12px auto;
+            color: white;
+            text-decoration: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s, height 0.4s;
+        }
+        .btn:hover::before {
+            width: 250%;
+            height: 250%;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f44336 0%, #ff5722 100%);
+            box-shadow: 0 4px 20px rgba(244, 67, 54, 0.5);
+            border-color: #ff8a65;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(244, 67, 54, 0.7);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+            box-shadow: 0 4px 20px rgba(255, 152, 0, 0.5);
+            border-color: #ffb74d;
+        }
+        .btn-secondary:hover {
+            box-shadow: 0 8px 30px rgba(255, 152, 0, 0.7);
+        }
+
+        .btn-tertiary {
+            background: linear-gradient(135deg, #434343 0%, #000000 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            border: 1px solid #ff5722;
+        }
+        .btn-tertiary:hover {
+            background: linear-gradient(135deg, #ff5722 0%, #f44336 100%);
+            box-shadow: 0 8px 25px rgba(255, 87, 34, 0.6);
+        }
+        .btn-icon {
+            margin-right: 10px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+        .footer-text {
+            margin-top: 25px;
+            color: rgba(255, 87, 34, 0.6);
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 480px) {
+            .main-card {
+                padding: 30px 20px;
+                margin: 10px;
+                border-radius: 20px;
+            }
+            .main-title {
+                font-size: 28px;
+            }
+            .btn {
+                padding: 15px 20px;
+                font-size: 15px;
+            }
+            .social-icons {
+                gap: 10px;
+            }
+            .social-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [{
+          "@type": "WebSite",
+          "name": "Card Page Maw",
+          "url": "https://yourdomain.com",
+          "description": "Card Page Maw adalah halaman bio link cepat dan ringan berbasis AMP yang menghubungkan semua tautan penting Anda dalam satu halaman. Cocok untuk media sosial dan personal branding.",
+          "inLanguage": "id"
+        }, {
+          "@type": "Organization",
+          "name": "Card Page Maw",
+          "url": "https://yourdomain.com",
+          "logo": "https://yourdomain.com/logo.png",
+          "sameAs": ["https://instagram.com/Card Page Maw", "https://twitter.com/Card Page Maw", "https://t.me/Card Page Maw"]
+        }, {
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://yourdomain.com"
+          }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tentang",
+            "item": "https://yourdomain.com"
+          }]
+        }, {
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Apa itu Card Page Maw?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Card Page Maw adalah platform bio link keren untuk gamer, memungkinkanmu menggabungkan semua akun gaming dan sosial dalam satu halaman."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Apakah gratis digunakan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ya, Card Page Maw menyediakan versi gratis yang dapat digunakan siapa saja."
+            }
+          }, {
+            "@type": "Question",
+            "name": "Apa saja link yang bisa dimasukkan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kamu bisa menambahkan link ke akun Steam, Twitch, Discord, Instagram, YouTube, dan lainnya."
+            }
+          }]
+        }, {
+          "@type": "Product",
+          "name": "Card Page Maw",
+          "image": "https://yourdomain.com/preview.png",
+          "description": "Card Page Maw adalah halaman bio link cepat dan ringan berbasis AMP yang menghubungkan semua tautan penting Anda dalam satu halaman. Cocok untuk media sosial dan personal branding.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Card Page Maw"
+          },
+          "review": {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Pengguna Card Page Maw"
+            },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Sangat berguna untuk menyatukan semua akun gaming saya di satu tempat. Desain simpel dan mudah digunakan!"
+          }
+        }]
+      }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-card">
+            <div class="social-icons">
+                <a href="https://x.com/Card Page Maw" class="social-icon">
+                    <amp-img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X (Twitter)" width="20" height="20" layout="fixed" style="filter: invert(1);"></amp-img>
+                </a>
+                <a href="https://instagram.com/Card Page Maw" class="social-icon">
+                    <amp-img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" width="20" height="20" layout="fixed" style="filter: invert(1);"></amp-img>
+                </a>
+                <a href="https://t.me/Card Page Maw" class="social-icon">
+                    <amp-img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/telegram.svg" alt="Telegram" width="20" height="20" layout="fixed" style="filter: invert(1);"></amp-img>
+                </a>
+                <a href="https://facebook.com/Card Page Maw" class="social-icon">
+                    <amp-img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" width="20" height="20" layout="fixed" style="filter: invert(1);"></amp-img>
+                </a>
+                <a href="https://wa.me/6285888888" class="social-icon">
+                    <amp-img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="Link" width="20" height="20" layout="fixed" style="filter: invert(1);"></amp-img>
+                </a>
+            </div>
+
+            <div class="profile-section">
+                <div class="avatar">
+                    <amp-img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-256.png" alt="Card Page Maw Profile" width="75" height="75" layout="responsive"></amp-img>
+                </div>
+                <div class="brand-tag">Maw3six Team</div>
+                <h1 class="main-title">Card Page Maw</h1>
+                <p class="description">
+                    Card Page Maw – Satu Link untuk Semua Konten Anda
+                </p>
+            </div>
+
+            <div class="buttons-section">
+                <a href="#" class="btn btn-primary">
+                    <span class="btn-icon">🔥</span> Daftar
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    <span class="btn-icon">⚡</span> Login
+                </a>
+                <a href="#" class="btn btn-tertiary">
+                    <span class="btn-icon">🔗</span> Link Alternatif
+                </a>
+                <!--a href="#" class="btn btn-tertiary">
+                    <span class="btn-icon">🔗</span> Link Alternatif
+                </a>
+                <a href="#" class="btn btn-tertiary">
+                    <span class="btn-icon">🔗</span> Link Alternatif
+                </a-->
+            </div>
+
+            <div class="footer-text">
+                ( Card Page Maw - 2025 )
+            </div>
+        </div>
+    </div>
+</body>
+</html>
